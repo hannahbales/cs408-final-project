@@ -62,4 +62,6 @@ Mood Boost Suggestions
 
 TODO: Replace the wireframe below with you own design.
 
-![wireframe](wireframe-example.png)
+![wireframe](/img/final1.png)
+![wireframe](/img/final2.png)
+![wireframe](/img/final3.png)
