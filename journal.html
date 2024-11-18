@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal Entry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Mental Health Journal</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mood.html">My Mood</a>
+      <a href="journal.html">Journal</a>
+      <a href="gratitude.html">Gratitude</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+  <main class="journal-page">
+    <h1>Journal Entry</h1>
+    <div class="journal-container">
+      <!-- Calendar Section -->
+      <div class="calendar">
+        <label for="journal-date"><strong>Select a Date:</strong></label>
+        <input type="date" id="journal-date" name="journal-date" required>
+      </div>
+
+      <!-- Journal Entry Section -->
+      <div class="journal-entry">
+        <h2>Provide a Journal Entry:</h2>
+        <textarea id="journal-text" name="journal-text" rows="8" placeholder="Write your thoughts, feelings, or experiences..."></textarea>
+
+        <!-- Upload Photo Section -->
+        <div class="upload">
+          <label for="journal-photo"><strong>Upload Photo(s):</strong></label>
+          <input type="file" id="journal-photo" name="journal-photo" accept="image/*" multiple>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit-journal" class="button">Submit Entry</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mental Health Journal. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
