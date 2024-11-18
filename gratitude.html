@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gratitude Journal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Mental Health Journal</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mood.html">My Mood</a>
+      <a href="journal.html">Journal</a>
+      <a href="gratitude.html">Gratitude</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+  <main class="gratitude-page">
+    <h1>Gratitude Journal</h1>
+    <div class="gratitude-container">
+      <!-- Calendar Section -->
+      <div class="calendar">
+        <label for="gratitude-date"><strong>Select a Date:</strong></label>
+        <input type="date" id="gratitude-date" name="gratitude-date" required>
+      </div>
+
+      <!-- Gratitude Prompt Section -->
+      <div class="gratitude-entry">
+        <h2>Gratitude Prompt:</h2>
+        <p id="gratitude-prompt">What is something you accomplished recently that you're proud of?</p>
+        <textarea id="gratitude-response" name="gratitude-response" rows="6" placeholder="Write your response here..."></textarea>
+        <button id="submit-gratitude" class="button">Submit Response</button>
+
+        <!-- Quote of the Day -->
+        <div class="quote-of-the-day">
+          <h3>Quote of the Day:</h3>
+          <p id="quote">"The best way to predict the future is to create it." - Abraham Lincoln</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mental Health Journal. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
