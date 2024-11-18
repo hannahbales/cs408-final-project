@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Mental Health Journal</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mood.html">My Mood</a>
+      <a href="journal.html">Journal</a>
+      <a href="gratitude.html">Gratitude</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+  <main class="mood-page">
+    <h1>My Mood</h1>
+    <div class="mood-container">
+      <!-- Calendar Section -->
+      <div class="calendar">
+        <label for="mood-date"><strong>Select a Date:</strong></label>
+        <input type="date" id="mood-date" name="mood-date" required>
+      </div>
+
+      <!-- Mood Selector Section -->
+      <div class="mood-selector">
+        <h2>How are you feeling today?</h2>
+        <select id="mood" name="mood" required>
+          <option value="" disabled selected>My mood</option>
+          <option value="really-great">Really Great</option>
+          <option value="great">Great</option>
+          <option value="good">Good</option>
+          <option value="okay">Okay</option>
+          <option value="so-so">So-So</option>
+          <option value="meh">Meh</option>
+          <option value="bad">Bad</option>
+          <option value="very-bad">Very Bad</option>
+          <option value="worst">Worst</option>
+        </select>
+
+        <!-- Additional Notes -->
+        <div class="notes">
+          <label for="mood-notes"><strong>Additional Notes:</strong></label>
+          <textarea id="mood-notes" name="mood-notes" rows="5" placeholder="Write any additional thoughts or details..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit-mood" class="button">Submit</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mental Health Journal. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
