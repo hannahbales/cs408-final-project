@@ -67,6 +67,21 @@ button {
   border-radius: 5px;
 }
 
+#recent-entry-container .button {
+  background-color: #71b5da;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#recent-entry-container .button:hover {
+  background-color: #161a35;
+}
+
 button:hover {
   background-color: #161a35;
 }
