@@ -36,6 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Initialize the recent entry section
     fetchMostRecentEntry();
-  });
-  
-  
+});
