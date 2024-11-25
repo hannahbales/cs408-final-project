@@ -1,4 +1,266 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+/* General */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #f0f8ff, #e6f7f9);
+  color: #333;
+}
+
+/* Headers */
+header {
+  background-color: #4c54af;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #cfd1d4;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.header-nav a {
+  
+  text-decoration: none;
+  color: #79b5f9;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-nav a:hover {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: #2d4662;
+}
+
+button {
+  background-color: #4c54af;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #161a35;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+}
+
+form select, 
+form textarea, 
+form button {
+  margin-top: 0.5rem;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4c54af;
+  color: white;
+}
+
+/* Mood Tracker */
+.mood-page {
+  padding: 1rem;
+}
+
+.mood-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.calendar, .mood-selector {
+  flex: 1;
+}
+
+.calendar input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.mood-selector {
+  text-align: left;
+}
+
+.mood-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.notes textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.notes label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Journal Page */
+.journal-page {
+  padding: 1rem;
+}
+
+.journal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.calendar, .journal-entry {
+  flex: 1;
+}
+
+.calendar input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.journal-entry {
+  text-align: left;
+}
+
+.journal-entry textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.upload input[type="file"] {
+  margin-top: 0.5rem;
+}
+
+/* Gratitude */
+.gratitude-page {
+  padding: 1rem;
+}
+
+.gratitude-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.calendar input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.gratitude-entry {
+  flex: 1;
+  text-align: left;
+}
+
+.gratitude-entry textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.quote-of-the-day {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #4c54af;
+  font-style: italic;
+}
+
+/* History */
+.history-page {
+  padding: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group select,
+#custom-date-range input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.history-entries {
+  padding: 1rem;
+  border-top: 2px solid #ddd;
+}
+
+.history-entries .entry {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.history-entries .entry h3 {
+  margin: 0;
+}
+
+.history-entries .entry p {
+  margin: 0.5rem 0 0 0;
 }
