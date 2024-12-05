@@ -1,10 +1,13 @@
 // JOURNAL.html
+
 document.getElementById("submit-journal").addEventListener("click", async () => {
     const date = document.getElementById("journal-date").value;
-    const text = document.getElementById("journal-text").value;
+    const entry = document.getElementById("journal-text").value;
     const photoInput = document.getElementById("journal-photo");
+    const timestamp = Date.now();
+    const type = document.getElementById("entry-type");
   
-    if (!date || !text) {
+    if (!date || !entry) {
       alert("Please select a date and provide a journal entry.");
       console.warn("Validation failed: Missing date or text"); 
       return;
@@ -25,24 +28,24 @@ document.getElementById("submit-journal").addEventListener("click", async () => 
   
     const journalData = {
       date,
-      text,
+      entry,
       photos,
-      timestamp: Date.now(),
+      timestamp,
+      type: "Journal Entry",
     };
   
     try {
-      const response = await fetch(
-        "https://8e8xac7l1a.execute-api.us-east-2.amazonaws.com/journal",
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(journalData),
-        }
-      );
+        // Send data to the API
+        const apiEndpoint = "https://8e8xac7l1a.execute-api.us-east-2.amazonaws.com/journal";
+        const fetchResponse = await fetch(apiEndpoint, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(journalData),
+        });
   
-      if (response.ok) {
+      if (fetchResponse.ok) {
         alert("Journal entry submitted successfully!");
         console.log("Journal entry submitted:", journalData); // Log successful submission
         document.getElementById("journal-date").value = "";

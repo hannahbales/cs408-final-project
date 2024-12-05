@@ -17,7 +17,7 @@ header {
 .header-title h1 {
   margin: 0;
   font-size: 2rem;
-  color: #cfd1d4;
+  color: #ebeef1;
 }
 
 .header-nav {
@@ -30,7 +30,7 @@ header {
 .header-nav a {
   
   text-decoration: none;
-  color: #79b5f9;
+  color: #ffffff;
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 5px;
@@ -58,32 +58,17 @@ main {
 }
 
 button {
-  background-color: #4c54af;
-  color: white;
+  background-color: #ce93dc;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
-}
-
-#recent-entry-container .button {
-  background-color: #71b5da;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-#recent-entry-container .button:hover {
-  background-color: #161a35;
 }
 
 button:hover {
-  background-color: #161a35;
+  background-color: #621c63;
 }
 
 form {
@@ -114,6 +99,35 @@ footer {
   background-color: #4c54af;
   color: white;
 }
+
+/* Recent Entry Display */
+#recent-entry-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#recent-entry-container p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#recent-entry-container a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ce93dc;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+#recent-entry-container a.button:hover {
+  background-color: #621c63;
+}
+
 
 /* Mood Tracker */
 .mood-page {
@@ -259,23 +273,29 @@ footer {
   font-size: 1rem;
 }
 
-.history-entries {
-  padding: 1rem;
-  border-top: 2px solid #ddd;
+.history-entry {
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 15px;
+  margin-bottom: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.history-entries .entry {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 5px;
+.history-entry h2 {
+  font-size: 1.2em; 
+  margin-bottom: 10px; 
 }
 
-.history-entries .entry h3 {
-  margin: 0;
+.history-entry p {
+  font-size: 1em; 
+  margin: 5px 0; 
 }
 
-.history-entries .entry p {
-  margin: 0.5rem 0 0 0;
+.history-entry p strong {
+  font-weight: bold; 
+}
+
+.history-entry p:not(:last-child) {
+  margin-bottom: 10px; 
 }

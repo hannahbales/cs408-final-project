@@ -3,6 +3,7 @@ document.getElementById("submit-mood").addEventListener("click", async () => {
     const date = document.getElementById("mood-date").value; // Date input
     const mood = document.getElementById("mood").value; // Mood selector
     const notes = document.getElementById("mood-notes").value; // Additional notes
+    const type = document.getElementById("entry-type");
 
     if (!date || !mood) {
         alert("Please select a date and mood."); // Validate inputs
@@ -13,7 +14,8 @@ document.getElementById("submit-mood").addEventListener("click", async () => {
         date, 
         mood,
         notes: notes || "No additional notes provided.", // Default if notes are empty
-        timestamp: Date.now() // Current timestamp in milliseconds
+        timestamp: Date.now(), // Current timestamp in milliseconds
+        type: "Mood Log",
     };
 
     try {
@@ -28,7 +30,6 @@ document.getElementById("submit-mood").addEventListener("click", async () => {
 
         if (response.ok) {
             alert("Mood entry submitted successfully!");
-            // Optionally, clear form fields
             document.getElementById("mood-date").value = "";
             document.getElementById("mood").value = "";
             document.getElementById("mood-notes").value = "";
